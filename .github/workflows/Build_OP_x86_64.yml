@@ -111,10 +111,4 @@ jobs:
       uses: actions/upload-artifact@master
       with:
         name: OpenWrt
-        path: openwrt/bin
-
-    - name : Upload config
-      uses: actions/upload-artifact@master
-      with:
-        name: OpenWrt
-        path: openwrt/.config
+        path: openwrt
