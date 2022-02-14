@@ -16,7 +16,7 @@ on:
       - master
 
   schedule:
-    - cron: 0 8 * * 5
+    - cron: * 8 * * 5
   
   #watch:
     #types: [started]
@@ -67,7 +67,7 @@ jobs:
         cd openwrt
         echo "src-git openclash https://github.com/vernesong/OpenClash" >> ./feeds.conf.default
         echo "src-git helloworld https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
-        
+        echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall" >> ./feeds.conf.default
     - name: Update & Install feeds
       working-directory: ./openwrt
       run: |
